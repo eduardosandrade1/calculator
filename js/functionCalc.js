@@ -1,4 +1,7 @@
 var inputElement = document.querySelector('.inputElement')
+var n1 ='';
+var operator = '';
+
 function One(){
     inputElement.value += 1;
 }
@@ -30,20 +33,61 @@ function zero(){
     inputElement.value += 0;
 }
 function vezes(){
-    
+    n1 = inputElement.value;
+    inputElement.value += '*';
+    operator = '*';
+    inputElement.value = "";
+    //console.log(n1)
 }
 function dividir(){
-    
+    n1 = inputElement.value;
+    inputElement.value += '/';
+    operator = '/';
+    inputElement.value = "";
 }
 function soma(){
-    
+    n1 = parseInt(inputElement.value);
+    inputElement.value += '+';
+    operator = '+';
+    inputElement.value = "";
 }
 function subtration(){
-    
+    n1 = inputElement.value;
+    inputElement.value += '-';
+    operator = '-';
+    inputElement.value = "";
 }
 function deleted(){
-
+    var inputText = inputElement.value;
+    inputElement.value = inputText.substring(0, inputText.length-1 )
 }
+
 function igual(){
     
+    n2 = parseInt(inputElement.value);
+    inputElement.value = "";
+    if (operator === '+'){
+        console.log(n1+n2);
+        inputElement.value = n1+n2;
+ 
+    }
+    else if (operator === '-'){
+        console.log(n1-n2)
+        var menos = n1-n2;
+        inputElement.value = n1-n2;
+    }
+    else if(operator === '*'){
+        console.log(n1*n2);
+        inputElement.value = n1*n2;
+    }
+    else if(operator === '/'){
+        inputElement.value = n1/n2;
+        console.log(n1/n2);
+    }
+    console.log(n1, operator, n2)
+}
+function limpar(){
+    inputElement.value = "";
+    console.log(inputElement.value)
+    operator = '';
 }
