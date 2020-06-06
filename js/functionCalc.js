@@ -32,6 +32,9 @@ function none(){
 function zero(){
     inputElement.value += 0;
 }
+function ponto(){
+    inputElement.value += '.';
+}
 function vezes(){
     n1 = inputElement.value;
     inputElement.value += '*';
@@ -46,7 +49,7 @@ function dividir(){
     inputElement.value = "";
 }
 function soma(){
-    n1 = parseInt(inputElement.value);
+    n1 = parseFloat(inputElement.value);
     inputElement.value += '+';
     operator = '+';
     inputElement.value = "";
@@ -63,17 +66,14 @@ function deleted(){
 }
 
 function igual(){
-    
-    n2 = parseInt(inputElement.value);
+    n2 = parseFloat(inputElement.value);
     inputElement.value = "";
     if (operator === '+'){
         console.log(n1+n2);
         inputElement.value = n1+n2;
- 
     }
     else if (operator === '-'){
         console.log(n1-n2)
-        var menos = n1-n2;
         inputElement.value = n1-n2;
     }
     else if(operator === '*'){

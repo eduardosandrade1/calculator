@@ -1,0 +1,25 @@
+button{
+    display: inline;
+    padding: 15px;
+    font-size: 20px;
+    align-items: center;
+}
+input{
+    font-size: 28px;
+    max-width: 180px;
+}
+.botoes{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 210px;
+    margin: auto;
+    align-items: center;
+}
+.zero{
+    padding-left: 35px;
+    padding-right: 40px;
+}
+.limpar{
+    padding-left: 20px;
+    padding-right: 30px;
+}
